@@ -1,0 +1,155 @@
+/* src/styles/Header.css */
+/* Elimina márgenes laterales que puedan causar espacios */
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+.logo-link{
+  text-decoration: none;
+}
+/* Header container */
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f66b40;
+  padding: 10px 20px;
+  flex-wrap: wrap; /* Permite que los elementos se apilen */
+  box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
+  position: relative;
+}
+
+/* Header content wrapper */
+.header-content {
+  display: flex;
+
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Left section inside the header */
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo section */
+.logo-section {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  margin-left: 5%;
+}
+
+/* Logo image */
+.logo-placeholder {
+  width: 100%; /* Permite que el logo crezca hasta llenar el contenedor */
+  max-width: 200px; /* Cambia este valor para permitir que sea más ancho */
+  height: auto; /* Mantiene las proporciones de la imagen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.logo-placeholder:hover {
+  transform: scale(1.2); /* Aumenta el tamaño del logo un 20% al hacer hover */
+}
+
+.site-name:hover {
+  transform: scale(1.2); /* Aumenta el tamaño del logo un 20% al hacer hover */
+}
+
+/* Site name text */
+.site-name {
+  font-size: 2.4em;
+  color: white;
+  margin-right: 20px;
+  margin-left: 50px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* Navigation menu */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  margin-left: 10%;
+}
+
+/* Navigation links and dropdown buttons */
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffff;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 1.6em;
+  border-radius: 10px;
+  margin-right: 10px;
+  margin-left: 10%;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  background-color: #ffefc1;
+  color: #c6320b;
+}
+
+.nav-link svg {
+  margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+  /* Ajustar el padding del header */
+  .header {
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Ajustar el logo */
+  .logo-placeholder {
+    max-width: 80px;
+  }
+
+  /* Ajustar el nombre del sitio */
+  .site-name {
+    font-size: 1.5em;
+    margin-left: 0;
+  }
+
+  /* Ajustar el menú de navegación */
+  .nav-menu {
+    margin-left: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Ajustar los enlaces de navegación */
+  .nav-link {
+    font-size: 1em;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .logo-link{
+    text-decoration: none;
+  }
+}
+@media (max-width: 480px) {
+  /* Ajustar aún más para pantallas muy pequeñas */
+  .logo-placeholder {
+    max-width: 60px;
+  }
+
+  .site-name {
+    font-size: 1.2em;
+  }
+
+  .nav-link {
+    font-size: 0.9em;
+  }
+}

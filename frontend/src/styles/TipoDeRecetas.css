@@ -1,0 +1,51 @@
+/* src/styles/TipoDeRecetas.css */
+
+/* Main content area styles */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  margin: 20px;
+  background-color: #f3e9c5;
+  border-radius: 15px;
+}
+
+/* Grid layout for displaying recipes */
+.recetas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Individual recipe card */
+.receta-card {
+  background-color: #f3e9c5;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+/* Image inside the recipe card */
+.receta-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Button/link to view recipe details */
+.receta-button {
+  display: block;
+  background-color: #f8c97c;
+  border: none;
+  color: #000;
+  padding: 10px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* Hover effect for the recipe button */
+.receta-button:hover {
+  background-color: #ff7700;
+  color: #fff;
+}

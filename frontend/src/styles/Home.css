@@ -1,0 +1,178 @@
+/* src/styles/Home.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+.home-page {
+  font-family: "Montserrat", sans-serif;
+  background-color: #ffefc1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.home-main-content {
+  flex: 1;
+  width: 100%;
+}
+
+/* Recuadro superior en el body */
+.hero-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-content {
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  transform: translateY(-50%);
+  max-width: 600px;
+  padding: 0 10px;
+}
+
+.hero-description {
+  font-size: 1.6em;
+  font-weight: 400;
+  line-height: 1.2;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Contenedor común para el título y las tarjetas */
+.section-content {
+  width: 95%; /* Ocupa el 90% del ancho de la página */
+  margin: 0 auto; /* Centra el contenedor */
+  
+}
+
+/* Título de sección */
+.section-title {
+  font-size: 1.5em;
+  color: #f77e58;
+  margin-left: 2.5%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+/* Grid de audiolibros */
+.audiobooks-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Siempre 4 columnas */
+  gap: 0px;
+  padding: 0 20px 0 20px;
+  margin-bottom: 20px;
+  
+}
+
+/* Tarjeta individual de audiolibro */
+.audiobook-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #ffefc1;
+  padding: 10px;
+  width: 100%;
+  max-width: 240px; /* Ancho máximo para todas las tarjetas */
+  margin: 0 auto;
+}
+
+.audiobook-card img {
+  width: 100%;
+  height: 300px; /* Altura fija para todas las imágenes */
+  object-fit: cover; /* La imagen se ajusta al contenedor sin distorsión */
+  border-radius: 10px;
+}
+
+/* Título del audiolibro */
+.audiobook-title {
+  display: block;
+  font-size: 1em;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+/*  background-color: #F8C97C;*/
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 0.3s;
+  margin-top: 10px;
+}
+
+.audiobook-title:hover {
+  white-space: normal; /* Permite que el texto se expanda en varias líneas */
+  overflow: visible;
+  height: auto; /* Ajusta la altura automáticamente */
+ /* background-color: #F66B40;*/
+  color: #F66B40;
+}
+
+/* Año del audiolibro */
+.audiobook-year {
+  display: block;
+  font-size: 1.2em;
+  color: #000;
+ /* background-color: #F8C97C; /* Mismo fondo que el título */
+  padding: 0px;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 0px;
+
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .audiobooks-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .hero-description {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 768px) {
+  .audiobooks-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero-description {
+    font-size: 1.3em;
+    max-width: 90%;
+  }
+  .section-title {
+    font-size: 1.3em;
+    margin-left: 5%;
+  }
+  .audiobook-card img {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .audiobooks-grid {
+    grid-template-columns: 1fr;
+  }
+  .section-title {
+    font-size: 1em;
+    margin-left: 5%;
+  }
+  .hero-description {
+    font-size: 1em;
+  }
+  .audiobook-card img {
+    height: 200px;
+  }
+}

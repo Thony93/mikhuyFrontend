@@ -1,0 +1,77 @@
+/* src/styles/Departamento.css */
+
+/* Estilo para la imagen del departamento */
+.departamento-imagen {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Margen superior para la sección de recetas del departamento */
+.recetas-departamento {
+  margin-top: 40px;
+}
+
+/* Estilo para los encabezados dentro de recetas-departamento */
+.recetas-departamento h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Configuración de la cuadrícula para mostrar las recetas */
+.recetas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Estilos para cada tarjeta de receta */
+.receta-card {
+  background-color: #353741;
+  padding: 10px;
+  text-align: center;
+  border: 2px solid #fff;
+}
+
+/* Estilos para la imagen dentro de la tarjeta de receta */
+.receta-card img {
+  width: 100%;
+  height: auto;
+}
+
+/* Estilos para el botón de la receta */
+.receta-button {
+  display: block;
+  background-color: #353741;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+/* Efecto al pasar el cursor sobre el botón de la receta */
+.receta-button:hover {
+  background-color: #e91656;
+}
+
+/* Estilo para el título del departamento */
+.departamento-titulo {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 36px;
+}
+
+/* Margen inferior para cada sección de recetas */
+.seccion-recetas {
+  margin-bottom: 50px;
+}
+
+/* Estilo para el título de cada sección (tipo de plato) */
+.titulo-seccion {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #c6320b;
+}

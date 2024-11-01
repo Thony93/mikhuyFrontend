@@ -1,0 +1,334 @@
+/* src/styles/Audiolibro.css */
+
+/* Estilos para el main content */
+.audiobook-main-content {
+    padding: 20px;
+    background-color: #FFEFC1;
+    border-radius: 15px;
+    margin: 40px auto;
+    margin-left: 10.5%;
+    margin-right: 10.5%;
+    max-width: 1450px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* Contenedor principal */
+  .audiobook-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1450px;
+    font-family: 'Montserrat', sans-serif;
+    
+  }
+  
+  /* Sección izquierda */
+  .audiobook-left-section {
+    flex: 1;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 10px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* Imagen de la portada */
+  .audiobook-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* Detalles debajo de la imagen */
+  .audiobook-details {
+    margin-top: 20px;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    
+  }
+  
+  .audiobook-details p {
+    margin: 5px 0;
+    font-size: 16px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 19.02px;
+  }
+  .subtitulos-atributos{
+    color: #F77E58;
+    font-weight: 400;
+  }
+
+  
+  /* Sección derecha */
+  .audiobook-right-section {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  /* Alinear contenido a la izquierda */
+  .audiobook-right-section h2,
+  .audiobook-right-section h3,
+  .audiobook-right-section p {
+    text-align: left;
+  }
+  
+  /* Estilos para el título y subtítulos */
+  .audiobook-page .audiobook-title {
+    font-size: 23.04px;
+    color: #F77E58;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+  }
+  
+  .audiobook-subtitle {
+    font-size: 19.02px;
+    color: #000;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+  }
+  
+  .audiobook-summary {
+    font-size: 19.02px;
+    color: #000;
+  }
+  
+  /* Controles de audio */
+  .audiobook-audio-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px auto 20px auto;
+    max-width: 800px;
+  }
+  
+  .audiobook-left-controls,
+  .audiobook-right-controls {
+    height: 50px;
+    display: flex;
+    align-items: center;
+  }
+  .audiobook-volume-button{
+    background-color: #FFEFC1;
+    border: none;
+  }
+  .audiobook-volume-button img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .audiobook-volume-slider {
+    margin-left: 10px;
+  }
+  
+  .audiobook-control-button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  .audiobook-control-button-middle {
+    background-color: transparent;
+    border: none;
+    font-size: 40px;
+    margin: 0 10px;
+    cursor: pointer;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+/* Sección izquierda */
+.audiobook-left-section {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Imagen de la portada */
+.audiobook-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Detalles debajo de la imagen */
+.audiobook-details {
+  margin-top: 20px;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+}
+
+.audiobook-details p {
+  margin: 5px 0;
+  font-size: 16px;
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+  font-size: 19.02px;
+}
+.subtitulos-atributos {
+  color: #f77e58;
+  font-weight: 400;
+}
+
+/* Sección derecha */
+.audiobook-right-section {
+  flex: 1;
+  min-width: 300px;
+  margin-top: 20px;
+}
+
+/* Alinear contenido a la izquierda */
+.audiobook-right-section h2,
+.audiobook-right-section h3,
+.audiobook-right-section p {
+  text-align: left;
+}
+
+/* Estilos para el título y subtítulos */
+.audiobook-title {
+  font-size: 23.04px;
+  color: #f77e58;
+  margin-bottom: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.audiobook-subtitle {
+  font-size: 19.02px;
+  color: #000;
+  margin-bottom: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.audiobook-summary {
+  font-size: 19.02px;
+  color: #000;
+}
+
+/* Controles de audio */
+.audiobook-audio-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px auto 20px auto;
+  max-width: 800px;
+}
+
+.audiobook-left-controls,
+.audiobook-right-controls {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+.audiobook-volume-button {
+  background-color: #ffefc1;
+  border: none;
+}
+.audiobook-volume-button img {
+  width: 30px;
+  height: 30px;
+}
+
+.audiobook-volume-slider {
+  margin-left: 10px;
+}
+
+.audiobook-control-button {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.audiobook-control-button-middle {
+  background-color: transparent;
+  border: none;
+  font-size: 40px;
+  margin: 0 10px;
+  cursor: pointer;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.audiobook-control-button:hover {
+  color: #f66b40;
+}
+.audiobook-control-button-middle:hover {
+  color: #f66b40;
+}
+
+/* Barra de progreso */
+.audiobook-progress-bar {
+  margin: 0 auto 20px auto;
+  max-width: 800px;
+}
+
+.audiobook-progress-slider {
+  width: 100%;
+}
+
+/* Estilos para los controles deslizantes (volumen y progreso) */
+.audiobook-volume-slider::-webkit-slider-thumb,
+.audiobook-progress-slider::-webkit-slider-thumb {
+  background-color: #f77e58;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.audiobook-volume-slider::-moz-range-thumb,
+.audiobook-progress-slider::-moz-range-thumb {
+  background-color: #f77e58;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.audiobook-volume-slider::-ms-thumb,
+.audiobook-progress-slider::-ms-thumb {
+  background-color: #f77e58;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Para cambiar el color de la barra */
+.audiobook-volume-slider,
+.audiobook-progress-slider {
+  accent-color: #f77e58;
+}
+
+/* Responsividad */
+@media (max-width: 480px) {
+  .audiobook-title {
+    font-size: 1.5em;
+  }
+
+  .audiobook-subtitle {
+    font-size: 1.1em;
+  }
+
+  .audiobook-summary {
+    font-size: 0.85em;
+  }
+
+  .audiobook-control-button {
+    font-size: 1em;
+  }
+  /* Media query para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .audiobook-container {
+      flex-direction: column;
+    }
+  }
+}

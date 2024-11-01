@@ -1,0 +1,26 @@
+/* Aseguramos que html y body ocupen toda la altura */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+/* Reset de márgenes y paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* El contenedor principal utiliza Flexbox */
+.app-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* El contenedor de la página agrega márgenes */
+.page-container {
+  flex: 1;
+}

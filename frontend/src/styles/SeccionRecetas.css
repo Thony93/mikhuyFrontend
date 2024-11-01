@@ -1,0 +1,68 @@
+/* src/styles/SeccionRecetas.css */
+
+/* Contenedor de la fila de recetas */
+.recetas-fila {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Botones de navegación */
+.boton-navegacion {
+  background-color: #e5d3b3;
+  border: 2px solid #000;
+  border-radius: 50%;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 24px;
+  margin: 0 10px;
+}
+
+/* Estado deshabilitado para los botones de navegación */
+.boton-navegacion:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Contenedor de las recetas */
+.recetas-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+/* Tarjeta individual de receta */
+.receta-card {
+  background-color: #f3e9c5;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 0 10px;
+  min-width: 200px;
+}
+
+/* Imagen dentro de la tarjeta de receta */
+.receta-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Botón para ver detalles de la receta */
+.receta-button {
+  display: block;
+  background-color: #f8c97c;
+  border: none;
+  color: #000;
+  padding: 10px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* Efecto al pasar el cursor sobre el botón de receta */
+.receta-button:hover {
+  background-color: #ff7700;
+  color: #fff;
+}

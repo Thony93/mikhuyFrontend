@@ -1,0 +1,33 @@
+/* src/styles/Footer.css */
+/* Elimina márgenes laterales que puedan causar espacios */
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+.footer {
+  width: 100%;
+  background-color: #f66b40; /* Fondo del footer */
+  text-align: center;
+  padding: 20px 0px 20px 0px;
+  margin-top: 60px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.footer p {
+  margin: 5px 0;
+  color: #000; /* Texto en negro */
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    margin: 10px 0;
+  }
+}
