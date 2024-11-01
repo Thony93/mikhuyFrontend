@@ -87,7 +87,7 @@ function Audiolibro() {
       try {
         // Reemplaza esta URL con la URL correcta de tu API
         const response = await axios.get(
-          `http://localhost:8000/api/libros/${id_libro}/`
+          `https://mikhuy.pythonanywhere.com/api/libros/${id_libro}/`
         );
         console.log("id_libro:", id_libro);
         setAudiolibro(response.data); // Guardar el audiolibro en el estado

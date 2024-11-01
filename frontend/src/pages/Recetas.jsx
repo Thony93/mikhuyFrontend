@@ -17,7 +17,7 @@ function Recetas() {
     // Función para obtener los libros desde la API
     const fetchRecetas = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/api/recetas/");
+        const response = await axios.get("https://mikhuy.pythonanywhere.com/api/recetas/");
         setRecetas(response.data); // Guardamos las recetas en el estado
         setLoading(false); // Desactivamos el estado de loading
       } catch (error) {

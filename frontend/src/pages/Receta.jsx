@@ -17,7 +17,7 @@ function Receta() {
     const fetchReceta = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8000/api/recetas/${id_receta}/`
+          `https://mikhuy.pythonanywhere.com/api/recetas/${id_receta}/`
         );
         setReceta(response.data);
         setLoading(false);
