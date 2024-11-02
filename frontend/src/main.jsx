@@ -7,6 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App"; // Componente principal de la aplicación
 import "./styles/index.css"; // Estilos globales
 
+
 // Crea el root para renderizar la aplicación en el elemento con id 'root'
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

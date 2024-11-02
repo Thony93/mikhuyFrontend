@@ -18,12 +18,18 @@ html {
   flex-wrap: wrap; /* Permite que los elementos se apilen */
   box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
   position: relative;
+  align-items: center;
+  overflow: hidden; /* Asegura que el contenido extra se oculte */
+  transition: height 0.5s ease; /* Transición suave para la expansión */
+}
+
+.header.expanded {
+  height: 150px; /* Altura expandida ajustada para mayor espacio */
 }
 
 /* Header content wrapper */
 .header-content {
   display: flex;
-
   align-items: center;
   font-family: "Montserrat", sans-serif;
 }
@@ -43,9 +49,10 @@ html {
 }
 
 /* Logo image */
-.logo-placeholder {
+.logo-placeholder{
   width: 100%; /* Permite que el logo crezca hasta llenar el contenedor */
   max-width: 200px; /* Cambia este valor para permitir que sea más ancho */
+  max-height: 120px;
   height: auto; /* Mantiene las proporciones de la imagen */
   display: flex;
   justify-content: center;
@@ -53,13 +60,14 @@ html {
   font-weight: bold;
   margin-right: 10px;
 }
-
+/*
 .logo-placeholder:hover {
-  transform: scale(1.2); /* Aumenta el tamaño del logo un 20% al hacer hover */
-}
+  transform: scale(1.2); 
+}*/
 
 .site-name:hover {
   transform: scale(1.2); /* Aumenta el tamaño del logo un 20% al hacer hover */
+  transition: 0.6s;
 }
 
 /* Site name text */
@@ -67,9 +75,10 @@ html {
   font-size: 2.4em;
   color: white;
   margin-right: 20px;
-  margin-left: 50px;
+  margin-left: 10px;
   margin-top: 0px;
   margin-bottom: 0px;
+  transition: 0.6s;
 }
 
 /* Navigation menu */
@@ -92,15 +101,103 @@ html {
   margin-right: 10px;
   margin-left: 10%;
   cursor: pointer;
+  transition: 0.8s;
 }
 
 .nav-link:hover {
   background-color: #ffefc1;
   color: #c6320b;
+  transition: 0.8s;
 }
 
 .nav-link svg {
   margin-right: 5px;
+}
+
+.search-button {
+  display: flex; /* Permite el uso de flexbox para centrar el icono */
+  align-items: center;
+  justify-content: center;
+  color: #ffff; /* Color del texto o icono */
+  background-color: transparent; /* Cambia el color de fondo según lo desees */
+  border: none; /* Sin borde */
+  border-radius: 50%; /* Hace que el botón sea circular */
+  width: 62px; /* Ajusta el tamaño */
+  height: 40px; /* Ajusta el tamaño */
+  font-size: 1.6em; /* Tamaño del icono o texto */
+  margin-left: 10px; /* Margen izquierdo para separación */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  transition: 0.8s; /* Transición suave al cambiar de estado */
+}
+
+.search-button:hover {
+  background-color: #ffefc1;
+  color: #c6320b;
+  transition: 0.8s;
+}
+
+.search-container {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease;
+  display: flex;
+  border-radius: 10px;
+  align-items: center;
+  background-color: transparent;
+  justify-content: flex-start;
+  width: 100%; /* Asegura que ocupe el ancho completo en el header */
+  padding: 10px; /* Añade un padding interno */
+  margin-left: 40px; /* Empuja el input hacia la derecha */
+}
+
+.search-container.expanded {
+  height: 150px; /* Altura expandida cuando está visible */
+}
+
+.search-input {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  width: 60%; /* Ajusta el ancho */
+  max-width: 500px;
+  transition: border-color 0.5s;
+  margin-right: 10px;
+  outline: none; /* Elimina el contorno al hacer clic */
+  box-shadow: none; /* Elimina sombras adicionales */
+
+}
+
+.search-btn {
+  padding: 10px;
+  font-size: 1em;
+  background-color: #f66b40;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 5px; /* Mueve el botón ligeramente a la derecha del input */
+  transition: background-color 0.3s;
+}
+
+.search-btn:hover {
+  background-color: #c6320b;
+}
+
+.search-results {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  max-width: 300px;
+  position: absolute;
+  top: 60px; /* ajusta según tu diseño */
+  z-index: 1;
+}
+
+.book-item {
+  margin-bottom: 10px;
+  padding: 5px;
+  border-bottom: 1px solid #eee;
 }
 
 @media (max-width: 768px) {
@@ -151,5 +248,15 @@ html {
 
   .nav-link {
     font-size: 0.9em;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-input {
+    width: 80%; /* Aumenta el ancho en pantallas más pequeñas */
+  }
+
+  .search-container {
+    padding: 8px; /* Reduce el padding para pantallas pequeñas */
   }
 }

@@ -55,6 +55,9 @@ html {
   flex-direction: column;
   width: 45%;
 }
+.seccion-atributos{
+  margin-bottom: 20px;
+}
 
 /* Imagen de la receta */
 .receta-imagen {
@@ -68,42 +71,38 @@ html {
 .seccion-descripcion {
   width: 100%;
   max-width: 600px;
-  margin-left: 5%;
   margin-right: 5%;
+  margin-bottom: 40px;
+  text-align: left;
 }
 
 .descripcion {
-  padding-left: 5%;
   padding-right: 5%;
   color: #000;
   font-size: 19.2px;
   font-weight: 400;
-  text-align: left;
 }
 
 /* Títulos y textos */
 .nombre-receta {
-  text-align: center;
   font-size: 2em;
   color: #f77e58;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  font-weight: 700;
 }
 
 .main-content h2 {
   color: #f77e58;
   font-size: 23.04px;
-  font-weight: 600;
 }
 
 .main-content h3 {
   color: #f77e58;
   font-size: 19.2px;
-  font-weight: 500;
+  font-weight: 400;
 }
-
-.ingredientes-titulo,
-.titulo-pasos {
-  text-align: center;
+.titulo-ingredientes, .titulo-preparacion{
+  font-weight: 400;
 }
 
 .ingredientes,
@@ -188,3 +187,4 @@ html {
     font-size: 0.9em;
   }
 }
+

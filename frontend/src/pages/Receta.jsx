@@ -17,7 +17,7 @@ function Receta() {
     const fetchReceta = async () => {
       try {
         const response = await axios.get(
-          `https://mikhuy.pythonanywhere.com/api/recetas/${id_receta}/`
+          `http://localhost:8000/api/recetas/${id_receta}/`
         );
         setReceta(response.data);
         setLoading(false);
@@ -32,7 +32,22 @@ function Receta() {
   }, [id_receta]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="spinner center">
+        <div className="spinner-blade"></div>
+        <div className="spinner-blade"></div>
+        <div className="spinner-blade"></div>
+        <div className="spinner-blade"></div>
+        <div className="spinner-blade"></div>
+        <div className="spinner-blade"></div>
+        <div className="spinner-blade"></div>
+        <div className="spinner-blade"></div>
+        <div className="spinner-blade"></div>
+        <div className="spinner-blade"></div>
+        <div className="spinner-blade"></div>
+        <div className="spinner-blade"></div>
+      </div>
+    );
   }
 
   if (error) {
@@ -75,7 +90,7 @@ function Receta() {
             </div>
 
             <div className="seccion-preparacion">
-              <h2 className="titulo-preparacion">PREPARACIÓN</h2>
+              <h2 className="titulo-preparacion">Preparación</h2>
               <div className="explicacion-pasos">
                 <ol>
                   {receta.pasos.map((paso, index) => (
@@ -93,7 +108,7 @@ function Receta() {
             </div>
 
             <div className="seccion-ingredientes">
-              <h2 className="titulo-ingredientes">INGREDIENTES</h2>
+              <h2 className="titulo-ingredientes">Ingredientes</h2>
               <ul className="ingredientes">
                 {receta.ingredientes.map((ingrediente, index) => (
                   <li key={index}>

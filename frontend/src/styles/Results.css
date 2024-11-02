@@ -1,0 +1,11 @@
+/* Estructura de página para que el footer esté siempre al final */
+.results-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .results-main-content {
+    flex: 1; /* Esto permite que el contenido principal ocupe todo el espacio disponible */
+    padding-bottom: 20px; /* Espacio para el footer */
+  }
