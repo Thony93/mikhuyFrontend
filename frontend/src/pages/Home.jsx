@@ -16,7 +16,7 @@ function Home() {
     if (query.trim() !== "") {
       setLoading(true);
       try {
-        const response = await axios.get(process.env.REACT_APP_API=$query);
+        const response = await axios.get(process.env.REACT_APP_API);
         setLibros(response.data); // Almacena los resultados de búsqueda
       } catch (error) {
         console.error("Error al buscar libros:", error);
