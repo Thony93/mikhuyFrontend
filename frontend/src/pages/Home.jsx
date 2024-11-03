@@ -18,7 +18,7 @@ function Home() {
     if (query.trim() !== "") {
       setLoading(true);
       try {
-        const response = await axios.get(`${REACT_APP_API}/api/libros/buscar/?search=${query}`);
+        const response = await axios.get(`${apiURL}/api/libros/buscar/?search=${query}`);
         setLibros(response.data); // Almacena los resultados de búsqueda
       } catch (error) {
         console.error("Error al buscar libros:", error);
@@ -31,7 +31,7 @@ function Home() {
   useEffect(() => {
     const fetchLibros = async () => {
       try {
-        const response = await axios.get(`${REACT_APP_API}user/Mikhuy/files/home/Mikhuy/Mikhuy/backend/api`);
+        const response = await axios.get(`${apiURL}user/Mikhuy/files/home/Mikhuy/Mikhuy/backend/api`);
         setLibros(response.data);
         setLoading(false);
       } catch (error) {
