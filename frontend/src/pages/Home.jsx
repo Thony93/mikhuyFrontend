@@ -12,11 +12,13 @@ function Home() {
   const [loading, setLoading] = useState(true);
   const [query, setQuery] = useState("");
 
+  const apiURL = process.env.REACT_APP_API;
+
   const handleSearch = async () => {
     if (query.trim() !== "") {
       setLoading(true);
       try {
-        const response = await axios.get(process.env.REACT_APP_API);
+        const response = await axios.get(`${REACT_APP_API}/api/libros/buscar/?search=${query}`);
         setLibros(response.data); // Almacena los resultados de búsqueda
       } catch (error) {
         console.error("Error al buscar libros:", error);
@@ -29,7 +31,7 @@ function Home() {
   useEffect(() => {
     const fetchLibros = async () => {
       try {
-        const response = await axios.get(process.env.REACT_APP_API);
+        const response = await axios.get(`${REACT_APP_API}/api/libros/`);
         setLibros(response.data);
         setLoading(false);
       } catch (error) {
