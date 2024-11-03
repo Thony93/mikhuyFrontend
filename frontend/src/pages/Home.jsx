@@ -31,7 +31,7 @@ function Home() {
   useEffect(() => {
     const fetchLibros = async () => {
       try {
-        const response = await axios.get(`${REACT_APP_API}/api/libros/`);
+        const response = await axios.get(`${REACT_APP_API}user/Mikhuy/files/home/Mikhuy/Mikhuy/backend/api`);
         setLibros(response.data);
         setLoading(false);
       } catch (error) {
